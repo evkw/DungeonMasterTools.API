@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DungeonMasterTools.Models.Entities
+namespace DungeonMasterToolsModels.Entities
 {
     public class EntityActionBase
     {

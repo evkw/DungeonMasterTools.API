@@ -1,12 +1,12 @@
-﻿using DungeonMasterTools.Models.Entities;
+﻿using DungeonMasterToolsModels.Entities;
+using DungeonMasterToolsModels.Items;
 using Microsoft.EntityFrameworkCore;
-using DungeonMasterTools.Models.Items;
 
-namespace DungonMasterToolsRepository
+namespace DungeonMasterToolsRepository
 {
-    public class DungonMasterToolsDbContext: DbContext
+    public class DungeonMasterToolsDbContext: DbContext
     {
-        public DungonMasterToolsDbContext(DbContextOptions<DungonMasterToolsDbContext> options)
+        public DungeonMasterToolsDbContext(DbContextOptions<DungeonMasterToolsDbContext> options)
             : base(options)
         {
 

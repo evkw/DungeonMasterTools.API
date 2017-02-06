@@ -1,4 +1,4 @@
-﻿namespace DungeonMasterTools.Models.Items
+﻿namespace DungeonMasterToolsModels.Items
 {
     public class ItemModel
     {

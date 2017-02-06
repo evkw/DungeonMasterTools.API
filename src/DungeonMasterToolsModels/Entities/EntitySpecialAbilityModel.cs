@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DungeonMasterTools.Models.Entities
+namespace DungeonMasterToolsModels.Entities
 {
     public class EntitySpecialAbilityModel: EntityActionBase
     {

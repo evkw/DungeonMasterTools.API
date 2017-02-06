@@ -16,7 +16,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsService",
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsModels", "src\DungeonMasterToolsModels\DungeonMasterToolsModels.xproj", "{69C9CD87-02EC-452B-9298-40E268D22F93}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungonMasterToolsRepository", "src\DungonMasterToolsRepository\DungonMasterToolsRepository.xproj", "{CA6109C7-F0B6-4863-A191-B31464430F90}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsRepository", "src\DungeonMasterToolsRepository\DungeonMasterToolsRepository.xproj", "{CA6109C7-F0B6-4863-A191-B31464430F90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

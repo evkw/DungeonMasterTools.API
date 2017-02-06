@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using DungeonMasterTools.Models.Items;
-using DungonMasterToolsRepository;
+using DungeonMasterToolsModels.Items;
+using DungeonMasterToolsRepository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DungeonMasterTools.Controllers
@@ -9,9 +9,9 @@ namespace DungeonMasterTools.Controllers
     [Route("api/[controller]")]
     public class ItemsController : Controller
     {
-        private readonly DungonMasterToolsDbContext context;
+        private readonly DungeonMasterToolsDbContext context;
 
-        public ItemsController(DungonMasterToolsDbContext context)
+        public ItemsController(DungeonMasterToolsDbContext context)
         {
             this.context = context;
         }

@@ -1,17 +1,13 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
-using DungonMasterToolsRepository;
 
-namespace DungonMasterToolsRepository.Migrations
+namespace DungeonMasterToolsRepository.Migrations
 {
-    [DbContext(typeof(DungonMasterToolsDbContext))]
-    [Migration("20170206053945_Initial")]
-    partial class Initial
+    [DbContext(typeof(DungeonMasterToolsDbContext))]
+    partial class DungonMasterToolsDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")

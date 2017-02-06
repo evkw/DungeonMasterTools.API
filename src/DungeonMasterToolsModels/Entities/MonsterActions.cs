@@ -1,4 +1,4 @@
-﻿namespace DungeonMasterTools.Models.Entities
+﻿namespace DungeonMasterToolsModels.Entities
 {
     public class MonsterActions
     {
