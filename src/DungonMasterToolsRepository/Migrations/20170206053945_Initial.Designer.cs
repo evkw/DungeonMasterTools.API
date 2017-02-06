@@ -8,9 +8,10 @@ using DungonMasterToolsRepository;
 namespace DungonMasterToolsRepository.Migrations
 {
     [DbContext(typeof(DungonMasterToolsDbContext))]
-    partial class DungonMasterToolsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170206053945_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")

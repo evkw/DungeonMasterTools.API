@@ -1,25 +1,33 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using DungeonMasterTools.Models.Items;
+using DungonMasterToolsRepository;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DungeonMasterTools.Controllers
 {
     [Route("api/[controller]")]
     public class ItemsController : Controller
     {
+        private readonly DungonMasterToolsDbContext context;
+
+        public ItemsController(DungonMasterToolsDbContext context)
+        {
+            this.context = context;
+        }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<ItemModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            return context.Items;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ItemModel Get(int id)
         {
-            return "value";
+            return context.Items.FirstOrDefault(item => item.Id == id);
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using DungonMasterToolsRepository;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -25,6 +27,9 @@ namespace DungeonMasterTools
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<DungonMasterToolsDbContext>(
+                options => options.UseSqlServer("Server =.; Database = DungonMasterTools; Trusted_Connection = True; "));
+
             services.AddMvc();
             services.AddSwaggerGen(c =>
             {
