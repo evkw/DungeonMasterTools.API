@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using DungeonMasterToolsDomain.Entities.Monsters;
-using DungeonMasterToolsModels.Entities;
+using DungeonMasterToolsModels.Entities.Monster;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,7 +19,7 @@ namespace DungeonMasterTools.Controllers
 
         
         [HttpPost]
-        public string Post([FromBody] List<MonsterModel> monsters)
+        public string Post([FromBody] List<AddMonsterDto> monsters)
         {
             return this.monsterDomainHandler.BulkAddMonsters(monsters);
         }

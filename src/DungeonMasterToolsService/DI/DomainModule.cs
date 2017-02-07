@@ -1,7 +1,5 @@
 ﻿using Autofac;
-using System.Linq;
 using System.Reflection;
-using Microsoft.Extensions.DependencyModel;
 using Module = Autofac.Module;
 
 namespace DungeonMasterTools.DI

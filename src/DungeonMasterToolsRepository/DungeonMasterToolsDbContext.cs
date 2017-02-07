@@ -1,4 +1,5 @@
 ﻿using DungeonMasterToolsModels.Entities;
+using DungeonMasterToolsModels.Entities.Monster;
 using DungeonMasterToolsModels.Items;
 using Microsoft.EntityFrameworkCore;
 

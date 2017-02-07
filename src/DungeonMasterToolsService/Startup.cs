@@ -2,6 +2,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using DungeonMasterTools.DI;
+using DungeonMasterToolsModels;
 using DungeonMasterToolsRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +40,8 @@ namespace DungeonMasterTools
             {
                 c.SwaggerDoc("v1", new Info { Title = "Dungeon Master Tools", Version = "v1" });
             });
+
+            AutoMapperConfig.RegisterMappings();
 
             var builder = new ContainerBuilder();
             builder.Populate(services);

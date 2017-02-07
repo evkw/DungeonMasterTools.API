@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using DungeonMasterToolsModels.Entities;
+using DungeonMasterToolsModels.Entities.Monster;
 
 namespace DungeonMasterToolsDomain.Entities.Monsters
 {
     public interface IMonsterDomainHandler
     {
-        string BulkAddMonsters(List<MonsterModel> monsters);
+        string BulkAddMonsters(List<AddMonsterDto> monsters);
     }
 }

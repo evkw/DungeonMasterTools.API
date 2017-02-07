@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using DungeonMasterToolsModels.Entities;
+using AutoMapper;
+using DungeonMasterToolsModels.Entities.Monster;
 using DungeonMasterToolsRepository;
 
 namespace DungeonMasterToolsDomain.Entities.Monsters
@@ -14,8 +15,16 @@ namespace DungeonMasterToolsDomain.Entities.Monsters
             this.context = context;
         }
 
-        public string BulkAddMonsters(List<MonsterModel> monsters)
+        public string BulkAddMonsters(List<AddMonsterDto> addMonsterDtos)
         {
+
+            foreach(var addMonsterDto in addMonsterDtos)
+            {
+                var monster = Mapper.Map<MonsterModel>(addMonsterDto);
+            }
+
+            context.SaveChanges();
+            context.SaveChanges();
             Console.WriteLine("this works");
             return "woop";
         }

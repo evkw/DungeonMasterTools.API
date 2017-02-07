@@ -1,4 +1,4 @@
-﻿namespace DungeonMasterToolsModels.Entities
+﻿namespace DungeonMasterToolsModels.Entities.Monster
 {
     public class MonsterSpecialAbilities
     {

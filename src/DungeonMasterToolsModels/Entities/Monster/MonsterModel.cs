@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using DungeonMasterToolsModels.Entities.Monster;
 
-namespace DungeonMasterToolsModels.Entities
+namespace DungeonMasterToolsModels.Entities.Monster
 {
-    public class EntitySpecialAbilityModel: EntityActionBase
+    public class MonsterModel: MonsterBase
     {
         public List<MonsterSpecialAbilities> MonsterSpecialAbilities { get; set; }
         public List<MonsterActions> MonsterActions { get; set; }

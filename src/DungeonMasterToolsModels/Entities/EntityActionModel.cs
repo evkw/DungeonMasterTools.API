@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DungeonMasterToolsModels.Entities.Monster;
 
 namespace DungeonMasterToolsModels.Entities
 {

@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace DungeonMasterToolsModels.Entities
+﻿namespace DungeonMasterToolsModels.Entities.Monster
 {
-    public class MonsterModel
+    public class MonsterBase
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -14,7 +12,7 @@ namespace DungeonMasterToolsModels.Entities
         public int HitPoints { get; set; }
         public string HitDice { get; set; }
         public string Speed { get; set; }
-        public int  Strength { get; set; }
+        public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Constitution { get; set; }
         public int Intelligence { get; set; }
@@ -28,7 +26,5 @@ namespace DungeonMasterToolsModels.Entities
         public string Senses { get; set; }
         public string Languages { get; set; }
         public string ChallengeRating { get; set; }
-        public List<MonsterSpecialAbilities> MonsterSpecialAbilities { get; set; }
-        public List<MonsterActions> MonsterActions { get; set; }  
     }
 }
