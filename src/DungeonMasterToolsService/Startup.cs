@@ -1,4 +1,8 @@
-﻿using DungeonMasterToolsRepository;
+﻿using System;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using DungeonMasterTools.DI;
+using DungeonMasterToolsRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +28,7 @@ namespace DungeonMasterTools
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
             services.AddDbContext<DungeonMasterToolsDbContext>(
@@ -34,8 +38,13 @@ namespace DungeonMasterTools
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Dungeon Master Tools", Version = "v1" });
-            }
-        );
+            });
+
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            builder.RegisterModule(new DomainModule());
+            var container = builder.Build();
+            return container.Resolve<IServiceProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

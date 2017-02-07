@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DungeonMasterToolsDomain.Entities.Monsters;
 using DungeonMasterToolsModels.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,11 +10,18 @@ namespace DungeonMasterTools.Controllers
     [Route("api/[controller]")]
     public class MonstersController : Controller
     {
+        private readonly IMonsterDomainHandler monsterDomainHandler;
+
+        public MonstersController(IMonsterDomainHandler monsterDomainHandler)
+        {
+            this.monsterDomainHandler = monsterDomainHandler;
+        }
+
+        
         [HttpPost]
         public string Post([FromBody] List<MonsterModel> monsters)
         {
-            var blah = monsters;
-            return "good job";
+            return this.monsterDomainHandler.BulkAddMonsters(monsters);
         }
     }
 }
