@@ -15,7 +15,7 @@ namespace DungeonMasterToolsRepository.Migrations
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DungeonMasterTools.Models.Entities.EntityActionModel", b =>
+            modelBuilder.Entity("DungeonMasterTools.Models.Entities.ActionModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -35,7 +35,7 @@ namespace DungeonMasterToolsRepository.Migrations
                     b.ToTable("Actions");
                 });
 
-            modelBuilder.Entity("DungeonMasterTools.Models.Entities.EntitySpecialAbilityModel", b =>
+            modelBuilder.Entity("DungeonMasterTools.Models.Entities.SpecialAbilityModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -58,7 +58,7 @@ namespace DungeonMasterToolsRepository.Migrations
 
                     b.Property<int>("ActionId");
 
-                    b.Property<int?>("EntitySpecialAbilityModelId");
+                    b.Property<int?>("SpecialAbilityModelId");
 
                     b.Property<int>("MonsterId");
 
@@ -68,7 +68,7 @@ namespace DungeonMasterToolsRepository.Migrations
 
                     b.HasIndex("ActionId");
 
-                    b.HasIndex("EntitySpecialAbilityModelId");
+                    b.HasIndex("SpecialAbilityModelId");
 
                     b.ToTable("MonsterActions");
                 });
@@ -134,7 +134,7 @@ namespace DungeonMasterToolsRepository.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("EntityActionModelId");
+                    b.Property<int?>("ActionModelId");
 
                     b.Property<int>("MonsterId");
 
@@ -142,7 +142,7 @@ namespace DungeonMasterToolsRepository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EntityActionModelId");
+                    b.HasIndex("ActionModelId");
 
                     b.HasIndex("MonsterId");
 
@@ -171,14 +171,14 @@ namespace DungeonMasterToolsRepository.Migrations
 
             modelBuilder.Entity("DungeonMasterTools.Models.Entities.MonsterActions", b =>
                 {
-                    b.HasOne("DungeonMasterTools.Models.Entities.EntityActionModel", "Action")
+                    b.HasOne("DungeonMasterTools.Models.Entities.ActionModel", "Action")
                         .WithMany("MonsterActions")
                         .HasForeignKey("ActionId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("DungeonMasterTools.Models.Entities.EntitySpecialAbilityModel")
+                    b.HasOne("DungeonMasterTools.Models.Entities.SpecialAbilityModel")
                         .WithMany("MonsterActions")
-                        .HasForeignKey("EntitySpecialAbilityModelId");
+                        .HasForeignKey("SpecialAbilityModelId");
 
                     b.HasOne("DungeonMasterTools.Models.Entities.MonsterModel", "Monster")
                         .WithMany("MonsterActions")
@@ -188,16 +188,16 @@ namespace DungeonMasterToolsRepository.Migrations
 
             modelBuilder.Entity("DungeonMasterTools.Models.Entities.MonsterSpecialAbilities", b =>
                 {
-                    b.HasOne("DungeonMasterTools.Models.Entities.EntityActionModel")
+                    b.HasOne("DungeonMasterTools.Models.Entities.ActionModel")
                         .WithMany("MonsterSpecialAbilities")
-                        .HasForeignKey("EntityActionModelId");
+                        .HasForeignKey("ActionModelId");
 
                     b.HasOne("DungeonMasterTools.Models.Entities.MonsterModel", "Monster")
                         .WithMany("MonsterSpecialAbilities")
                         .HasForeignKey("MonsterId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("DungeonMasterTools.Models.Entities.EntitySpecialAbilityModel", "SpecialAbility")
+                    b.HasOne("DungeonMasterTools.Models.Entities.SpecialAbilityModel", "SpecialAbility")
                         .WithMany("MonsterSpecialAbilities")
                         .HasForeignKey("SpecialAbilityId")
                         .OnDelete(DeleteBehavior.Cascade);

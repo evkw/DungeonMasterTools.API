@@ -18,6 +18,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsModels", 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsRepository", "src\DungeonMasterToolsRepository\DungeonMasterToolsRepository.xproj", "{CA6109C7-F0B6-4863-A191-B31464430F90}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsInfrastructure", "src\DungeonMasterToolsInfrastructure\DungeonMasterToolsInfrastructure.xproj", "{B9372047-F35C-4808-AF0D-5C1EA01D06CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{CA6109C7-F0B6-4863-A191-B31464430F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA6109C7-F0B6-4863-A191-B31464430F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA6109C7-F0B6-4863-A191-B31464430F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9372047-F35C-4808-AF0D-5C1EA01D06CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9372047-F35C-4808-AF0D-5C1EA01D06CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9372047-F35C-4808-AF0D-5C1EA01D06CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9372047-F35C-4808-AF0D-5C1EA01D06CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +55,6 @@ Global
 		{25045B12-9C3B-4123-B530-8A139934FDC8} = {0DFCB2F2-BB41-457F-872B-2074D3891263}
 		{69C9CD87-02EC-452B-9298-40E268D22F93} = {0DFCB2F2-BB41-457F-872B-2074D3891263}
 		{CA6109C7-F0B6-4863-A191-B31464430F90} = {0DFCB2F2-BB41-457F-872B-2074D3891263}
+		{B9372047-F35C-4808-AF0D-5C1EA01D06CF} = {0DFCB2F2-BB41-457F-872B-2074D3891263}
 	EndGlobalSection
 EndGlobal

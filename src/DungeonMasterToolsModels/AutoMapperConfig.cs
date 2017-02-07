@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using DungeonMasterToolsModels.Entities.Monster;
+using DungeonMasterToolsModels.Monster.DTOs;
+using DungeonMasterToolsModels.Monster.Entities;
 
 namespace DungeonMasterToolsModels
 {

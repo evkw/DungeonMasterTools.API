@@ -1,6 +1,7 @@
-﻿using DungeonMasterToolsModels.Entities;
-using DungeonMasterToolsModels.Entities.Monster;
+﻿using DungeonMasterToolsModels.Actions.Entities;
 using DungeonMasterToolsModels.Items;
+using DungeonMasterToolsModels.Monster.Entities;
+using DungeonMasterToolsModels.SpecialAbility.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DungeonMasterToolsRepository
@@ -16,9 +17,9 @@ namespace DungeonMasterToolsRepository
 
         public DbSet<MonsterModel> Monsters { get; set; }
         
-        public DbSet<EntityActionModel> Actions { get; set; }
+        public DbSet<ActionModel> Actions { get; set; }
 
-        public DbSet<EntitySpecialAbilityModel> SpecialAbilities { get; set; }
+        public DbSet<SpecialAbilityModel> SpecialAbilities { get; set; }
 
         public DbSet<MonsterActions> MonsterActions { get; set; }
         public DbSet<MonsterSpecialAbilities> MonsterSpecialAbilities { get; set; } 
@@ -32,10 +33,10 @@ namespace DungeonMasterToolsRepository
             modelBuilder.Entity<MonsterModel>()
                         .HasKey(m => m.Id);
 
-            modelBuilder.Entity<EntityActionModel>()
+            modelBuilder.Entity<ActionModel>()
                         .HasKey(a => a.Id);
 
-            modelBuilder.Entity<EntitySpecialAbilityModel>()
+            modelBuilder.Entity<SpecialAbilityModel>()
                         .HasKey(sa => sa.Id);
 
             modelBuilder.Entity<MonsterActions>()

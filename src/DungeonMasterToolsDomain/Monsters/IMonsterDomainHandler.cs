@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using DungeonMasterToolsModels.Entities.Monster;
+using DungeonMasterToolsModels.Monster.DTOs;
 
-namespace DungeonMasterToolsDomain.Entities.Monsters
+namespace DungeonMasterToolsDomain.Monsters
 {
     public interface IMonsterDomainHandler
     {

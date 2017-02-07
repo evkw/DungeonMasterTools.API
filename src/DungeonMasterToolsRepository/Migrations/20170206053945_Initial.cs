@@ -97,7 +97,7 @@ namespace DungeonMasterToolsRepository.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ActionId = table.Column<int>(nullable: false),
-                    EntitySpecialAbilityModelId = table.Column<int>(nullable: true),
+                    SpecialAbilityModelId = table.Column<int>(nullable: true),
                     MonsterId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -111,8 +111,8 @@ namespace DungeonMasterToolsRepository.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MonsterActions_SpecialAbilities_EntitySpecialAbilityModelId",
-                        column: x => x.EntitySpecialAbilityModelId,
+                        name: "FK_MonsterActions_SpecialAbilities_SpecialAbilityModelId",
+                        column: x => x.SpecialAbilityModelId,
                         principalTable: "SpecialAbilities",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -130,7 +130,7 @@ namespace DungeonMasterToolsRepository.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    EntityActionModelId = table.Column<int>(nullable: true),
+                    ActionModelId = table.Column<int>(nullable: true),
                     MonsterId = table.Column<int>(nullable: false),
                     SpecialAbilityId = table.Column<int>(nullable: false)
                 },
@@ -138,8 +138,8 @@ namespace DungeonMasterToolsRepository.Migrations
                 {
                     table.PrimaryKey("PK_MonsterSpecialAbilities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MonsterSpecialAbilities_Actions_EntityActionModelId",
-                        column: x => x.EntityActionModelId,
+                        name: "FK_MonsterSpecialAbilities_Actions_ActionModelId",
+                        column: x => x.ActionModelId,
                         principalTable: "Actions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -163,14 +163,14 @@ namespace DungeonMasterToolsRepository.Migrations
                 column: "ActionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MonsterActions_EntitySpecialAbilityModelId",
+                name: "IX_MonsterActions_SpecialAbilityModelId",
                 table: "MonsterActions",
-                column: "EntitySpecialAbilityModelId");
+                column: "SpecialAbilityModelId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MonsterSpecialAbilities_EntityActionModelId",
+                name: "IX_MonsterSpecialAbilities_ActionModelId",
                 table: "MonsterSpecialAbilities",
-                column: "EntityActionModelId");
+                column: "ActionModelId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MonsterSpecialAbilities_MonsterId",

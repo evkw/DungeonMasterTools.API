@@ -1,8 +1,13 @@
-﻿namespace DungeonMasterToolsModels.Entities.Monster
+﻿using System.Collections.Generic;
+using DungeonMasterToolsInfrastructure.Model;
+
+namespace DungeonMasterToolsModels.Monster.Entities
 {
-    public class MonsterBase
+    /// <summary>
+    /// Database model for a monster
+    /// </summary>
+    public class MonsterModel: EntityBase
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Size { get; set; }
         public string Type { get; set; }
@@ -26,5 +31,7 @@
         public string Senses { get; set; }
         public string Languages { get; set; }
         public string ChallengeRating { get; set; }
+        public List<MonsterSpecialAbilities> MonsterSpecialAbilities { get; set; }
+        public List<MonsterActions> MonsterActions { get; set; }
     }
 }
