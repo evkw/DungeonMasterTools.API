@@ -6,7 +6,7 @@ namespace DungeonMasterToolsDomain.Actions
 {
     public interface IEntityActionDomainHandler
     {
-        ActionModel AddActionModel(ActionModel action);
+        ActionModel AddActionModel(ActionModel action, bool saveChanges = false);
     }
 
     public class EntityActionDomainHandler : IEntityActionDomainHandler
@@ -18,7 +18,7 @@ namespace DungeonMasterToolsDomain.Actions
             this.context = context;
         }
 
-        public ActionModel AddActionModel(ActionModel action)
+        public ActionModel AddActionModel(ActionModel action, bool saveChanges = false)
         {
             var returnValue = context.Set<ActionModel>().FirstOrDefault(x => x.Name == action.Name);
 

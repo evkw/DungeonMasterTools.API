@@ -1,24 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0DFCB2F2-BB41-457F-872B-2074D3891263}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ABB14B29-DC32-442E-8BEE-B12FF8C91566}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsDomain", "src\DungeonMasterToolsDomain\DungeonMasterToolsDomain.xproj", "{E877533B-2C84-443A-945A-D74B4596C136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonMasterToolsDomain", "src\DungeonMasterToolsDomain\DungeonMasterToolsDomain.csproj", "{E877533B-2C84-443A-945A-D74B4596C136}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsService", "src\DungeonMasterToolsService\DungeonMasterToolsService.xproj", "{25045B12-9C3B-4123-B530-8A139934FDC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonMasterToolsService", "src\DungeonMasterToolsService\DungeonMasterToolsService.csproj", "{25045B12-9C3B-4123-B530-8A139934FDC8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsModels", "src\DungeonMasterToolsModels\DungeonMasterToolsModels.xproj", "{69C9CD87-02EC-452B-9298-40E268D22F93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonMasterToolsModels", "src\DungeonMasterToolsModels\DungeonMasterToolsModels.csproj", "{69C9CD87-02EC-452B-9298-40E268D22F93}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsRepository", "src\DungeonMasterToolsRepository\DungeonMasterToolsRepository.xproj", "{CA6109C7-F0B6-4863-A191-B31464430F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonMasterToolsRepository", "src\DungeonMasterToolsRepository\DungeonMasterToolsRepository.csproj", "{CA6109C7-F0B6-4863-A191-B31464430F90}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DungeonMasterToolsInfrastructure", "src\DungeonMasterToolsInfrastructure\DungeonMasterToolsInfrastructure.xproj", "{B9372047-F35C-4808-AF0D-5C1EA01D06CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonMasterToolsInfrastructure", "src\DungeonMasterToolsInfrastructure\DungeonMasterToolsInfrastructure.csproj", "{B9372047-F35C-4808-AF0D-5C1EA01D06CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

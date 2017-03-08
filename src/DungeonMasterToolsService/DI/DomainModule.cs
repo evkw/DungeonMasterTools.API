@@ -1,8 +1,8 @@
-﻿using Autofac;
-using System.Reflection;
+﻿using System.Reflection;
+using Autofac;
 using Module = Autofac.Module;
 
-namespace DungeonMasterTools.DI
+namespace DungeonMasterToolsService.DI
 {
     public class DomainModule : Module
     {

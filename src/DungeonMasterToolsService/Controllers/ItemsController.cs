@@ -4,7 +4,7 @@ using DungeonMasterToolsModels.Items;
 using DungeonMasterToolsRepository;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DungeonMasterTools.Controllers
+namespace DungeonMasterToolsService.Controllers
 {
     [Route("api/[controller]")]
     public class ItemsController : Controller

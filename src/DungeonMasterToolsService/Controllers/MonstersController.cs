@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace DungeonMasterTools.Controllers
+namespace DungeonMasterToolsService.Controllers
 {
     [Route("api/[controller]")]
     public class MonstersController : Controller

@@ -50,7 +50,7 @@ namespace DungeonMasterToolsDomain.Monsters
         {
             foreach(var a in actions)
             {
-                var lookup = 
+               // var lookup = 
             }
         }
     }

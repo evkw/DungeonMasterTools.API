@@ -1,9 +1,9 @@
 ﻿using System;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using DungeonMasterTools.DI;
 using DungeonMasterToolsModels;
 using DungeonMasterToolsRepository;
+using DungeonMasterToolsService.DI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace DungeonMasterTools
+namespace DungeonMasterToolsService
 {
     public class Startup
     {
